@@ -14,7 +14,7 @@ ul {
     height: 60px;
 }
 
-main,
+nav,
 .content {
     margin: 0 auto;
     width: 980px;
@@ -23,7 +23,9 @@ main,
 
 .logo {
     float: left;
-    width: 70%;
+    width: 50%;
+    margin-left: 13.5px;
+
 }
 
 
@@ -48,7 +50,7 @@ main,
 
 .menu-urls {
     height: 80px;
-    border-bottom: 3px solid #efefef;
+    border-bottom: 4px solid #efefef;
 }
 
 .menu ul li {
@@ -59,7 +61,7 @@ main,
 }
 
 .menu ul li:hover {
-    border-bottom: 3px solid #00bac6;
+    border-bottom: 5px solid #00bac6;
 }
 
 .menu ul li a:hover {
@@ -84,7 +86,7 @@ main,
     text-align: center;
     width: 30%;
     float: right;
-    
+
 }
 
 .busca input {
@@ -216,7 +218,14 @@ li.slick-active button {
     border-radius: 3px;
     padding: 6px 13px 6px 13px;
     margin: 15px 0 10px 62px;
+    transition: background 1s, color 1s;
 
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #252323;
+    font-weight: 600;
 }
 
 .content-right img {
