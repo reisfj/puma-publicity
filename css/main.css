@@ -5,7 +5,8 @@ body {
 }
 
 ul {
-    padding: 0px !important;
+    padding: 0;
+    list-style: none;
 }
 
 .menu-principal {
@@ -31,7 +32,6 @@ nav,
 
 .redes-sociais ul li {
     margin-left: 25px;
-    display: inline-block;
     float: left;
     list-style: none;
 }
@@ -54,7 +54,7 @@ nav,
 }
 
 .menu ul li {
-    display: inline-block;
+    float: left;
     color: #8b8b8b;
     margin-left: 15px;
     height: 50px;
@@ -66,7 +66,6 @@ nav,
 
 .menu ul li a:hover {
     color: #00bac6;
-
 }
 
 .menu ul li a {
@@ -86,7 +85,6 @@ nav,
     text-align: center;
     width: 30%;
     float: right;
-
 }
 
 .busca input {
@@ -112,30 +110,32 @@ nav,
     margin-bottom: 50px;
 }
 
-button.slick-prev {
-    font-size: 0px;
+button.slick-prev,
+button.slick-next {
+    font-size: 0;
     border: none;
     width: 25px;
     height: 51px;
     z-index: 9;
     background-color: transparent;
     position: absolute;
-    background-image: url(../img/anterior.png);
+    background-size: contain;
     top: 50%;
-    left: 14%;
+    
+}
+
+button.slick-prev {
+    cursor: pointer;
+    left: 10%;
+    background-image: url(../img/anterior.png);
+    background-repeat: no-repeat;
 }
 
 button.slick-next {
-    font-size: 0px;
-    border: none;
-    width: 25px;
-    height: 51px;
-    z-index: 9;
-    background-color: transparent;
-    position: absolute;
+    cursor: pointer;
+    right: 10%;
     background-image: url(../img/proximo.png);
-    top: 50%;
-    right: 14%;
+    background-repeat: no-repeat;
 }
 
 .slick-list {
@@ -147,14 +147,13 @@ button.slick-next {
 }
 
 .slick-dots li button {
-    font-size: 0px;
+    font-size: 0;
     border: 4.5px solid #ffffff;
-    width: 0px;
+    width: 0;
     height: 14px;
     background: transparent;
     border-radius: 30%;
     cursor: pointer;
-
 }
 
 .slick-dots {
@@ -165,13 +164,14 @@ button.slick-next {
     top: 500px;
 }
 
-li.slick-active button {
-    background: #ffffff;
-}
-
 .slick-dots li {
     padding-left: 10px;
     display: inline-block;
+}
+
+.slick-dots li.slick-active button {
+    background: #ffffff;
+    
 }
 
 .call-to-action {
@@ -179,8 +179,8 @@ li.slick-active button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 20px 0px 20px;
-    margin: 80px 20px 30px 30px;
+    padding: 20px 20px 0;
+    margin: 80px 20px 30px;
     border: 1px solid #252323;
 }
 
@@ -198,14 +198,12 @@ li.slick-active button {
     color: #8b8b8b;
     font-size: 1.2em;
     letter-spacing: 0.5px;
-
 }
 
 .sub-title b {
     font-size: 2.6em;
     color: black;
     font-family: 'Courier New', Courier, monospace;
-
 }
 
 .btn {
@@ -216,10 +214,9 @@ li.slick-active button {
     box-shadow: 0px 4px 6px 0px lightsteelblue;
     border: none;
     border-radius: 3px;
-    padding: 6px 13px 6px 13px;
+    padding: 6px 13px;
     margin: 15px 0 10px 62px;
     transition: background 1s, color 1s;
-
 }
 
 .btn:hover {
@@ -278,7 +275,6 @@ li.slick-active button {
     position: absolute;
     left: 920px;
     top: 90px;
-
 }
 
 .bloco-logos {
@@ -306,7 +302,6 @@ li.slick-active button {
     height: 70px;
 }
 
-
 .footer p {
     width: 90%;
     text-align: left;
@@ -324,7 +319,6 @@ li.slick-active button {
     content: '';
     width: 15px;
     height: 15px;
-    display: inline-block;
     background-image: url('../img/clock.png');
     float: left;
     background-repeat: no-repeat;
@@ -337,7 +331,6 @@ li.slick-active button {
     content: '';
     width: 17px;
     height: 24px;
-    display: inline-block;
     float: left;
     background-repeat: no-repeat;
     padding-left: 5px;
